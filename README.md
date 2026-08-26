@@ -35,7 +35,6 @@ Von / by [XCNAV](https://xcnav.de) — für Segelflug- und Gleitschirmpiloten.
 
 ## 📥 Download
 
-**[➜ Aktuelle Version herunterladen / Download the latest version](../../releases/latest)**
 
 Voraussetzung: **Android 8.0 oder neuer** / Requires **Android 8.0 or newer**
 
