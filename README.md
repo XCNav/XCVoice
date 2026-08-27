@@ -66,7 +66,7 @@ Voraussetzung: **Android 8.0 oder neuer** / Requires **Android 8.0 or newer**
 Die vollständige Anleitung in Deutsch und Englisch:
 The complete manual in German and English:
 
-**[➜ https://github.com/XCNav/XCVoice/blob/main/XCVoice-Handbuch-Manual%20.pdf](XCVoice-Handbuch-Manual.pdf)**
+**[➜ XCVoice MManual](XCVoice-Handbuch-Manual .pdf)**
 
 ## Funktionen / Features
 
