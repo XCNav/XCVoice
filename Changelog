@@ -1,0 +1,86 @@
+# XCVoice – Changelog
+
+
+
+## Version 3.2
+
+- **Announcement order changed:** aircraft type now comes right after the
+  alarm word ("Traffic, glider, 3 o'clock …"), in both languages.
+- **German altitude callout reworded:** "80 metres hoch." / "80 metres
+  tief." (roughly "80 metres high/low") instead of "80 metres über Dir." /
+  "unter Dir." (English wording was already "above."/"below." and is
+  unchanged.)
+- **New "Close XCVoice" button** in settings — stops the background service
+  and closes the app completely, including removing it from the
+  recent-apps overview (previously the service kept running there by
+  design).
+- **Tapping a traffic symbol on the radar** now triggers a one-time spoken
+  summary of that target: aircraft type, bearing (in whichever style is
+  configured), altitude, and climb rate — independent of that alarm
+  level's individual announcement toggles, since this is a deliberate
+  query, not an automatic alert.
+
+## Version 3.0
+
+ **BLE reception** added as a third connection mode alongside classic
+  Bluetooth and WiFi (TCP) — for devices like BlueConnect that expose the
+  FLARM data stream over a Nordic UART Service (BLE). Built-in device scan
+  right in the app, no manual pairing required.
+
+## Version 2.4
+
+- **Android Gradle Plugin/Gradle/SDK updated:** compileSdk/targetSdk 36,
+  AGP 8.13, Gradle 8.13 — a prerequisite for a possible future Play Store
+  submission (required since August 31, 2026); not strictly necessary for
+  GitHub distribution, but future-proofed anyway.
+- **Predictive back gesture** enabled in the manifest, matching the
+  existing `BackHandler`.
+- **Release keystore incident resolved:** the `xcvoice-release.jks`
+  believed lost was found again in OneDrive, backed up locally, and
+  signing was re-verified.
+- **Flagship feature: individually configurable announcement building
+  blocks per alarm level.** A long press on a level card (1/2/3) opens a
+  menu where alarm type, aircraft type, relative distance, relative
+  vertical, climb rate, and bearing type can each be switched on or off
+  independently. A short tap still just switches the whole level on or
+  off, as before. Existing global settings were automatically carried
+  over to all three levels the first time the app started after the
+  update.
+- **TTS audio channel diagnosis:** identified the cause of silence on
+  single-channel devices (missing `AudioAttributes`/channel
+  configuration); recommended the system-level Mono Audio setting as a
+  workaround, with a code-level fix using a custom `AudioTrack` prepared
+  as a possible next step.
+- **Bilingual manual (DE/EN)** created as a PDF, including screenshots,
+  most recently extended to cover the per-level announcement
+  configuration.
+- **Multilingual marketing page** (DE/EN/FR) for xcnav.de created as
+  self-contained HTML files for Wix.
+
+## Version 2.0 (rebuild)
+
+Complete rebuild of the app in Kotlin/Jetpack Compose to replace the
+original app (package `or.nevet.flarmdisplay`, internally named
+"FlarmDisplay"), after the previous developer was no longer available.
+New package `de.xcnav.xcvoice`.
+
+- More modern UI in the XCNAV colour scheme (navy/black/white with an
+  orange accent)
+- **New radar screen:** traffic shown as colour-coded arrows
+  (green/yellow/red by alarm level) around the own position, similar to
+  the separate FlarmDisplay hardware product
+  - Pinch-to-zoom for range
+  - Long press toggles between north-up and track-up
+  - Range rings with distance labels
+  - Tapping a target shows its details in the info window
+- **New direction callout option:** eight sectors in plain words (e.g.
+  "easy right, above"), as an alternative to the classic clock-position
+  bearing
+- **Test button** under the speech-rate slider, for a sample announcement
+  using whichever building blocks are currently enabled
+- **Bug fix:** the service kept announcing traffic after the app was
+  closed or after the FLARM was switched off
+- **Improved repeat logic:** reduced unnecessarily frequent repeat
+  announcements of the same target
+- Signed release build set up with its own keystore; distribution decided
+  as GitHub Releases / xcnav.de instead of (initially) Google Play
