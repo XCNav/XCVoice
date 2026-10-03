@@ -35,12 +35,16 @@ Von / by [XCNAV](https://xcnav.de) — für Segelflug- und Gleitschirmpiloten.
 
 ## 📥 Download
 
-
 Voraussetzung: **Android 8.0 oder neuer** / Requires **Android 8.0 or newer**
 
 ### Installation (Deutsch)
 
-1. Die Datei `xcvoice-x.y.z.apk` auf dem Telefon herunterladen.
+1. Oben rechts auf dieser Seite auf **„Releases"** klicken (oder direkt:
+   [github.com/XCNav/XCVoice/releases](https://github.com/XCNav/XCVoice/releases)).
+   Den **neuesten Eintrag ganz oben** öffnen und unter **„Assets"** die Datei
+   `xcvoice-x.y.z.apk` herunterladen. **Nicht** den grünen **„Code"**-Button
+   oben auf dieser Seite verwenden — der lädt nur den Quellcode herunter,
+   keine installierbare App.
 2. Auf die heruntergeladene Datei tippen. Android fragt, ob Apps aus dieser
    Quelle installiert werden dürfen — die Erlaubnis für den verwendeten Browser
    erteilen.
@@ -52,7 +56,12 @@ Voraussetzung: **Android 8.0 oder neuer** / Requires **Android 8.0 or newer**
 
 ### Installation (English)
 
-1. Download `xcvoice-x.y.z.apk` on your phone.
+1. Click **"Releases"** at the top right of this page (or go directly to
+   [github.com/XCNav/XCVoice/releases](https://github.com/XCNav/XCVoice/releases)).
+   Open the **newest entry at the top** and download the `xcvoice-x.y.z.apk`
+   file under **"Assets"**. **Do not** use the green **"Code"** button at the
+   top of this page — that only downloads the source code, not an installable
+   app.
 2. Tap the downloaded file. Android will ask whether apps from this source may
    be installed — grant the permission for the browser you used.
 3. Tap **Install**.
@@ -60,7 +69,6 @@ Voraussetzung: **Android 8.0 oder neuer** / Requires **Android 8.0 or newer**
    them no connection can be established.
 5. Pair the FLARM device once in the Android Bluetooth settings. XCVoice picks
    it up automatically from then on.
-
 ## 📖 Handbuch / Manual
 
 Die vollständige Anleitung in Deutsch und Englisch:
