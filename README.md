@@ -3,11 +3,11 @@
 **FLARM-Verkehrsansagen und Radar für Android**
 *FLARM voice traffic alerts and radar for Android*
 
-XCVoice verbindet sich per Bluetooth mit einem FLARM-Gerät und sagt erkannten
+XCVoice verbindet sich per Bluetooth, BLE oder WiFi TCP mit einem FLARM-Gerät und sagt erkannten
 Verkehr an — gesprochen, damit der Blick draußen bleiben kann, und als Radarbild,
 wenn die ganze Lage gefragt ist.
 
-XCVoice connects to a FLARM device over Bluetooth and tells you where the
+XCVoice connects to a FLARM device over Bluetooth, BLE or WiFi TCP and tells you where the
 traffic is — spoken, so you can keep your eyes outside, and on a radar picture
 when you want the full situation.
 
