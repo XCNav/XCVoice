@@ -1,5 +1,73 @@
 # XCVoice – Changelog
+.
 
+---
+## Version 5.6
+  **Climbrate announcement is now averaged to the last max. 30 seconds.
+    Custom course is now also read from $GPVTG (not just $GPRMC)
+    Debug logging of all received record types (for Logcat)
+
+## Version 5.5
+  ** TrackUp as default RadarMap setting. Tap and hold for NorthUp
+
+## Version 5.4
+  ** Error eliminated with reversion to NorthUp screen when connected via WiFi TCP
+
+## Version 5.2
+  ** Mirror effect deleted(Traffic was announced on the wrong side)
+
+## Version 5.1 
+  ** Enhanced Swipe to Zoom behaviour. Only one step per swipe instead of full range
+
+## Version 5.0 (Keyboard Shortcuts & Operation)
+
+- **System-wide keyboard shortcuts "p" and "o":** The **p** key toggles the
+  main traffic announcement switch on/off; the **o** key mutes a currently
+  playing announcement without disabling announcements entirely. Designed for
+  external keyboards or remote controls like the XCRemote, which identifies
+  itself as a BLE HID keyboard.
+- **Works system-wide**, regardless of which app is currently in the
+  foreground—enabled via a new accessibility service
+  (`KeyAccessibilityService`) that the pilot must manually authorize once
+  in the Android accessibility settings. A new status card in the app
+  settings displays the authorization status and provides a direct link to
+  the settings page. Without this authorization, the keys still work, but
+  only while XCVoice is in the foreground.
+- **Swipe instead of pinch for radar range:** similar to XCSoar, swiping up
+  now zooms in and swiping down zooms out, replacing the previous
+  two-finger gesture.
+
+## Version 4.0 (BLE, Behavioral Changes, Thermal Mode)
+
+- **BLE reception** added as a third connection method alongside Bluetooth
+  Classic and Wi-Fi (TCP)—for devices like BlueConnect that provide the
+  FLARM data stream via a Nordic UART service (BLE). Includes a built-in
+  device search within the app; no manual pairing required.
+- **Announcement order changed:** The aircraft type is now stated
+  immediately after the alert keyword ("Traffic alert, glider, 3 o'clock…"),
+  in both languages.
+- **German altitude announcement revised:** "80 meters high."  / "80 meters deep."
+  instead of "80 meters above you." / "below you."
+- **New "Close XCVoice" button** in the settings – stops the
+  background service and closes the app completely, including removing
+  it from the app switcher (previously, the service intentionally kept running).
+- **Tapping a traffic icon on the radar** now triggers a one-time
+  spoken summary of that target: aircraft type, bearing (in the
+  configured style), altitude, and climb rate – independent of individual
+  alert-level announcement toggles, as this is an intentional query, not
+  an automatic alert.
+- **New "Thermal Mode" toggle** in the settings (off by default):
+  Instead of re-announcing a target after a fixed suppression period,
+  when circling with other aircraft, the target is only re-announced
+  if distance (≥50 m) or altitude (≥30 m) has changed significantly –
+  plus an infrequent reminder after 90 seconds. Reduces constant
+  chatter when circling together in a thermal. If the toggle is off,
+  the previous purely time-based suppression period applies.
+
+## Version 3.3 (latest installed version)
+
+- **Android Gradle Plugin/Gradle/SDK updated:** compileSdk/targetSdk 36,
+  Google Play
 
 
 ## Version 3.2
