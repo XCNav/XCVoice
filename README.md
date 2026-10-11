@@ -178,21 +178,21 @@ vorn** und zeigt Luftfahrzeuge in einem Sektor um den eigenen Kurs
 - Steigende Ziele (≥ 0,5 m/s) zeigen ihren **Mittelwert der letzten Minute** in Grün
 - Liste unter dem Bild, **bester Steiger zuerst**
 - **Ansage des besten Steigers** (ab 1,0 m/s, nur solange die Scan-Seite offen
-  ist), z. B. *„Bester Steiger. Steigen 2,4 Meter. Arcus. D K A B C. vorne rechts.
+  ist), z. B. *„Bester Steiger. Steigen 2,4 Meter. Arcus. Delta Kilo Alpha Bravo Charlie. vorne rechts.
   Entfernung 1,2 Kilometer."*
 - **OGN-Abfrage:** Typ und Kennzeichen aus der OGN-Gerätedatenbank
   ([ddb.glidernet.org](https://ddb.glidernet.org)). Einmaliger Download mit
   Internet, danach offline aus dem Zwischenspeicher; Kennzeichen nur bei vom
   Halter freigegebenen Geräten. Im WLAN des FLARM-Geräts gibt es meist kein
   Internet — die Datenbank daher einmal vor dem Flug laden.
-- Einstellungen unter **Scan (Vorausschau)**: Sektorwinkel, Ansage, OGN-Abfrage
+- Einstellungen unter **Scan (Vorausschau)**: Sektorwinkel, Ansage inkl. Auswahl der Ansageteile (Steigrate, Typ, Kennzeichen, Richtung, Entfernung), OGN-Abfrage
 
 A second page next to the radar (**swipe left**) that looks only **ahead** and
 shows aircraft in a sector around your track (default ±30°, adjustable 15–60°);
 depth equals the zoom range. Climbing targets (≥ 0.5 m/s) show their **one-minute
 average** in green, listed best climber first. While the scan page is open, XCVoice
 announces the **best climber** (from 1.0 m/s), e.g. *"Best climber. Climbing 2.4
-metres. Arcus. D K A B C. front right. Distance 1.2 kilometres."* With **OGN
+metres. Arcus. Delta Kilo Alpha Bravo Charlie. front right. Distance 1.2 kilometres."* With **OGN
 lookup**, type and registration come from the OGN device database (one-time
 download, then cached offline; registrations only for devices released by their
 owner). The FLARM's own WiFi usually has no internet, so load the database once
