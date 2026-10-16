@@ -1,5 +1,21 @@
 # XCVoice – Changelog
-.
+
+##Version 6.1 (Incursion zone)
+
+New incursion zone: a zone of your own (cylinder made of radius and height band) around your aircraft. Every target entering it is announced once – independent of the FLARM warning. Off by default.
+All values freely selectable in the settings: radius (100 m – 2 km), height band (±50 – ±1000 m) or "ignore height", re-trigger distance in percent (hysteresis), announcement parts (direction, height, distance, type, registration), say count when several targets are inside, announce while circling.
+Quiet in a gaggle: announcement only on entry per target; again only after leaving the zone by the set hysteresis. Targets covered by FLARM alarms of the enabled levels are left to the normal announcement logic.
+Zone shown as a dashed orange ring on the radar.
+New key R "Repeat announcement" (also system-wide via the accessibility service, e.g. from the XCRemote): speaks the last announcement again.
+New team partner mode: enter the partner's FLARM ID or registration in the settings (several separated by commas). For this aircraft all alarms below level 3 are not announced; level 3 comes with the prefix "Team partner". Registrations are matched via the OGN database, the FLARM ID always works. The incursion zone does not announce the partner; cyan ring on the radar; optional minimum separation notice "Team partner too close".
+Manual updated to version 6.1 (new section 9).
+Version 6.0 (Scan mode)
+New scan mode as a second page next to the radar, reached by swiping horizontally on the radar screen (page dots below the picture). Shows only aircraft in a sector ahead (default ±30° around own track, adjustable 15–60°); the depth equals the zoom range, shared with the radar.
+One-minute climb rate: targets in the sector climbing at 0.5 m/s or more show their last-minute average in green beside the dot (after about 15 s of data). A list below shows the best climber first.
+Best-climber announcement (only while the scan page is open, from 1.0 m/s): "Best climber. Climbing 2.4 metres. Arcus. Delta Kilo Alpha Bravo Charlie. front right. Distance 1.2 kilometres." The registration is spelled in the NATO alphabet. A new best climber promptly, the same one at most once a minute; normal traffic warnings continue independently.
+OGN lookup for aircraft type and registration: one-time download of the OGN device database (ddb.glidernet.org), then an offline cache (refreshed weekly when online). Registrations only for devices released by their owner.
+New settings card "Scan (look ahead)": sector angle, best-climber announcement with selectable parts (climb rate, type, registration, direction, distance), OGN lookup.
+Manual updated to version 6.0 (new section 8).
 ## Version 6.0 (Scan mode)
 **New scan mode as a second page next to the radar, reached by swiping
 horizontally on the radar screen (page dots below the picture). Shows only
