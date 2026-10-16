@@ -5,7 +5,7 @@
 
 XCVoice verbindet sich per Bluetooth, BLE oder WiFi TCP mit einem FLARM-Gerät und sagt erkannten
 Verkehr an — gesprochen, damit der Blick draußen bleiben kann, und als Radarbild,
-wenn die ganze Lage gefragt ist. Neu in **Version 6.0**: der **Scan-Modus**, der
+wenn die ganze Lage gefragt ist. Neu in **Version 6.1**: die **Annäherungszone**. Seit **6.0**: der **Scan-Modus**, der
 voraus nach dem besten Aufwind sucht.
 
 XCVoice connects to a FLARM device over Bluetooth, BLE or WiFi TCP and tells you where the
@@ -131,7 +131,7 @@ wenn sich Entfernung (≥ 50 m) oder Höhe (≥ 30 m) merklich geändert haben, 
 eine Erinnerung nach 90 s. Im Geradeausflug gelten die normalen Sperrzeiten.
 
 **Tasten (z. B. XCRemote):** **L** pausiert/setzt die Verkehrsansage fort,
-**O** bricht die laufende Ansage ab.
+**O** bricht die laufende Ansage ab, **R** wiederholt die letzte Ansage.
 
 *Thermal mode (optional):* while circling together, the alarm level often stays
 the same for minutes. With thermal mode on, a target is — **only while you are
@@ -197,6 +197,35 @@ lookup**, type and registration come from the OGN device database (one-time
 download, then cached offline; registrations only for devices released by their
 owner). The FLARM's own WiFi usually has no internet, so load the database once
 before flying. Settings under **Scan (look ahead)**.
+
+### Annäherungszone / Incursion zone (neu in 6.1 / new in 6.1)
+
+Eine **selbst festgelegte Zone** um dein Flugzeug (Radius und Höhenband, alle Werte
+in den Einstellungen frei wählbar). Jedes Ziel, das hineinfliegt, wird einmal
+angesagt — auch wenn FLARM noch nicht warnt. Auf dem Radar erscheint die Zone als
+gestrichelter Ring.
+
+- Hysterese: erneute Ansage erst nach Verlassen der Zone um einen einstellbaren Prozentsatz — ruhig im Pulk
+- Ansageteile wählbar: Richtung, Höhe, Entfernung, Typ, Kennzeichen (NATO-Alphabet, OGN)
+- Taste **R** wiederholt die letzte Ansage (z. B. XCRemote: „Ansage wiederholen")
+- Ergänzt die FLARM-Alarme, ersetzt sie nicht; FLARM-Alarme haben Vorrang
+
+A **zone of your own** around your aircraft (radius and height band, all values freely
+selectable in the settings). Every target entering it is announced once — even when FLARM
+does not warn yet. The zone is drawn as a dashed ring on the radar. Hysteresis keeps it
+quiet in a gaggle; announcement parts are selectable; key **R** repeats the last
+announcement. It supplements FLARM alarms and does not replace them.
+
+### Teampartner / Team partner (neu in 6.1 / new in 6.1)
+
+FLARM-ID oder Kennzeichen des Partners in den Einstellungen eintragen: Bei diesem Flugzeug
+entfallen alle Alarme unterhalb **Stufe 3**; Stufe 3 wird mit dem Zusatz „Teampartner"
+angesagt. Türkiser Ring im Radar, optionaler Mindestabstand-Hinweis. Die Annäherungszone
+ignoriert den Partner.
+
+Enter your partner's FLARM ID or registration in the settings: for this aircraft all alarms
+below **level 3** are silenced; level 3 is announced with the prefix "Team partner". Cyan ring
+on the radar, optional minimum separation notice. The incursion zone ignores the partner.
 
 ### Infofenster / Info panel
 
