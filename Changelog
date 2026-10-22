@@ -1,5 +1,10 @@
 # XCVoice – Changelog
 
+##Version 6.3 
+
+New unit choice "Australia": distance in km, height in feet, climb/sink in knots (speed in km/h). The "Units" setting is now a three-way choice: Metric, Imperial, Australia. Existing settings are kept; on first launch the US defaults to Imperial and Australia to the Australian variant. The web app has the new choice too.
+
+
 ##Version 6.2 
 
 (BLE devices with FFE0, FLARM Flex)
