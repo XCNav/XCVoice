@@ -2,7 +2,9 @@
 
 ##Version 6.4 (OGN status display)
 
+Names for FLARM IDs: in the settings a FLARM ID can be given a short name (up to 5 characters). The name appears on the radar below the arrow, in the scan view and in the panel below the radar. Search by FLARM ID or registration (registration search needs the loaded OGN database, otherwise enter the 6-digit ID directly). Hits suggest the name from the registration (D-KABC → KABC). Registrations are only shown in the result if the owner released them.
 Status display for the OGN database in the scan settings: shows "✓ Database loaded: 36,765 devices, updated …", "Loading database …" or, on problems, "✗ Download failed" / "Update failed, cache: …". The "Load now" button downloads the database immediately, even if the cache is still fresh. Switching the OGN lookup on loads the database right away. Applies to the app and the web app.
+
 
 ##Version 6.3 
 
