@@ -1,5 +1,9 @@
 # XCVoice – Changelog
 
+##Version 6.4 (OGN status display)
+
+Status display for the OGN database in the scan settings: shows "✓ Database loaded: 36,765 devices, updated …", "Loading database …" or, on problems, "✗ Download failed" / "Update failed, cache: …". The "Load now" button downloads the database immediately, even if the cache is still fresh. Switching the OGN lookup on loads the database right away. Applies to the app and the web app.
+
 ##Version 6.3 
 
 New unit choice "Australia": distance in km, height in feet, climb/sink in knots (speed in km/h). The "Units" setting is now a three-way choice: Metric, Imperial, Australia. Existing settings are kept; on first launch the US defaults to Imperial and Australia to the Australian variant. The web app has the new choice too.
