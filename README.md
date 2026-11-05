@@ -87,7 +87,7 @@ Voraussetzung: **Android 8.0 oder neuer** / Requires **Android 8.0 or newer**
 Die vollständige Anleitung in Deutsch und Englisch:
 The complete manual in German and English:
 
-**[➜ XCVoice Handbuch/Manual](XCVoice-Handbuch-Manual.pdf)**
+**[➜ XCVoice Handbuch/Manual](XCVoice-Handbuch-Manual6.4.pdf)**
 
 ## Funktionen / Features
 
