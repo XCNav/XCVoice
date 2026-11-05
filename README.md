@@ -5,13 +5,11 @@
 
 XCVoice verbindet sich per Bluetooth, BLE oder WiFi TCP mit einem FLARM-Gerät und sagt erkannten
 Verkehr an — gesprochen, damit der Blick draußen bleiben kann, und als Radarbild,
-wenn die ganze Lage gefragt ist. Neu in **Version 6.1**: die **Annäherungszone**. Seit **6.0**: der **Scan-Modus**, der
-voraus nach dem besten Aufwind sucht.
+wenn die ganze Lage gefragt ist. Neu in **Version 6.4**: **Namen für FLARM-IDs**, **OGN-Statusanzeige**, **IGC-Flugaufzeichnung**, **BLE-Geräte wie FLARM Flex** und die Einheiten-Option **Australien**. Seit **6.1**: die **Annäherungszone**, seit **6.0** der **Scan-Modus**.
 
 XCVoice connects to a FLARM device over Bluetooth, BLE or WiFi TCP and tells you where the
 traffic is — spoken, so you can keep your eyes outside, and on a radar picture
-when you want the full situation. New in **version 6.0**: the **scan mode**, which
-looks ahead for the best lift.
+when you want the full situation. New in **version 6.4**: **names for FLARM IDs**, **OGN status display**, **IGC flight recording**, **BLE devices such as FLARM Flex** and an **Australia** unit option. Since 6.1 the **incursion zone**, since 6.0 the **scan mode**.
 
 Von / by [XCNAV](https://xcnav.de) — für Segelflug- und Gleitschirmpiloten.
 
@@ -181,7 +179,7 @@ vorn** und zeigt Luftfahrzeuge in einem Sektor um den eigenen Kurs
   ist), z. B. *„Bester Steiger. Steigen 2,4 Meter. Arcus. Delta Kilo Alpha Bravo Charlie. vorne rechts.
   Entfernung 1,2 Kilometer."*
 - **OGN-Abfrage:** Typ und Kennzeichen aus der OGN-Gerätedatenbank
-  ([ddb.glidernet.org](https://ddb.glidernet.org)). Einmaliger Download mit
+  ([ddb.glidernet.org](https://ddb.glidernet.org)). Eine **Statuszeile** zeigt, ob der Download geklappt hat (Anzahl Geräte, Stand), **„Jetzt laden“** startet ihn sofort. Einmaliger Download mit
   Internet, danach offline aus dem Zwischenspeicher; Kennzeichen nur bei vom
   Halter freigegebenen Geräten. Im WLAN des FLARM-Geräts gibt es meist kein
   Internet — die Datenbank daher einmal vor dem Flug laden.
@@ -227,6 +225,38 @@ Enter your partner's FLARM ID or registration in the settings: for this aircraft
 below **level 3** are silenced; level 3 is announced with the prefix "Team partner". Cyan ring
 on the radar, optional minimum separation notice. The incursion zone ignores the partner.
 
+### Namen für FLARM-IDs / Names for FLARM IDs (neu in 6.4 / new in 6.4)
+
+Einem häufig gesehenen Flugzeug lässt sich ein **Name mit bis zu 5 Zeichen** geben. Er erscheint
+auf dem Radar unter dem Pfeil, in der Scan-Liste und im Infofenster. Gesucht wird nach
+**FLARM-ID oder Kennzeichen** (Kennzeichen-Suche, sobald die OGN-Datenbank geladen ist); der
+Name wird aus dem Kennzeichen vorgeschlagen. Die Ansagen nennen den Namen nicht.
+
+Give an aircraft you see often a **name of up to 5 characters**. It is shown on the radar below the
+arrow, in the scan list and in the info panel. Search by **FLARM ID or registration** (registration
+search once the OGN database is loaded); a name is proposed from the registration. Announcements do
+not speak the name.
+
+### Flugaufzeichnung / Flight recording (IGC) (neu in 6.2 / new in 6.2)
+
+Zeichnet den eigenen Flug aus den FLARM-Daten als **IGC-Datei** auf, direkt im Ordner
+**Downloads** (z. B. `2026-11-05_0912_XCVoice.igc`). Start automatisch ab 25 km/h, Ende nach der
+Landung, Aufzeichnungen unter 3 Minuten werden verworfen. Für FLARM **ohne Drucksensor** kann der
+**Drucksensor des Telefons** verwendet werden. Ohne G-Satz, daher nicht für Wettbewerbe gültig.
+
+Records your own flight from the FLARM data as an **IGC file**, saved directly in the **Downloads**
+folder. Starts automatically above 25 km/h, ends after landing; recordings under 3 minutes are
+discarded. For FLARMs **without a pressure sensor** the **phone's barometer** can be used. No
+G record, so not valid for competitions.
+
+### Einheiten / Units (Australien neu in 6.2 / Australia new in 6.2)
+
+Drei Systeme: **Metrisch** (m, km, km/h, m/s), **Imperial** (ft, nm, kts) und **Australien**
+(km, ft, kts). Vorauswahl nach Region des Telefons.
+
+Three systems: **metric** (m, km, km/h, m/s), **imperial** (ft, nm, kts) and **Australia**
+(km, ft, kts). Preselected from the phone's region.
+
 ### Infofenster / Info panel
 
 <p align="center">
@@ -249,6 +279,12 @@ darauf führt in die Android-Einstellungen für die Sprachausgabe.
 *Announcements read with the wrong accent:* the matching voice data is not
 installed. Tap the notice in the settings to open the Android text-to-speech
 settings and download the correct voice.
+
+**FLARM Flex / BLE-Gerät wird nicht gefunden.** XCVoice sucht BLE-Geräte mit Nordic-UART- oder 0xFFE0-Dienst (ab 6.2). Gerät einschalten, in Reichweite halten und in den Einstellungen als BLE-Gerät wählen.
+*FLARM Flex / BLE device not found:* XCVoice scans for Nordic UART and 0xFFE0 services (since 6.2). Switch the device on, keep it in range and select it as BLE device in the settings.
+
+**Keine IGC-Datei.** Aufzeichnung eingeschaltet? Sie beginnt nach 15 s über 25 km/h und braucht mindestens 3 Minuten Flug. Datei im Ordner Downloads.
+*No IGC file:* is recording on? It starts after 15 s above 25 km/h and needs at least 3 minutes of flight. File is in Downloads.
 
 **Keine Verbindung / No connection.** Ist das FLARM eingeschaltet und in den
 Android-Bluetooth-Einstellungen gekoppelt? Steht der Hauptschalter oben in den
